@@ -27,7 +27,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.user.create', [
+            'title' => 'Tambah User'
+        ]);
     }
 
     /**
@@ -49,7 +51,11 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return $user;
+        return view('backend.user.show', [
+            'title' => 'Lihat Detail User',
+            'user' => $user
+        ]);
     }
 
     /**

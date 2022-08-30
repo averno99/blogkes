@@ -23,7 +23,7 @@
     <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 
     <!-- Template Main CSS File -->
-    <link href="backend/css/style.css" rel="stylesheet">
+    <link href="{{ asset('backend/css/style.css') }}" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: NiceAdmin - v2.3.1
@@ -78,8 +78,8 @@
 
 
     <!-- Template Main JS File -->
-    <script src="backend/js/main.js"></script>
-    <script src="backend/js/script.js"></script>
+    <script src="{{ asset('backend/js/main.js') }}"></script>
+    <script src="{{ asset('backend/js/script.js') }}"></script>
 
 </body>
 

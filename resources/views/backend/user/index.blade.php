@@ -7,7 +7,7 @@
             <div class="card-body">
                 <h5 class="card-title">Data User</h5>
                 {{-- <hr class="divider mt-0"> --}}
-                <a href="#" class="btn btn-primary mb-3">
+                <a href="/users/create" class="btn btn-primary mb-3">
                     <i class="bi bi-plus-circle me-1"></i> Tambah Data
                 </a>
                 <div class="table-responsive">
@@ -31,7 +31,7 @@
                                     <td>{{ $user->role->name }}</td>
                                     <td>{{ $user->created_at }}</td>
                                     <td>
-                                        <a href="#" class="btn btn-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lihat Data">
+                                        <a href="/users/{{ $user->url }}" class="btn btn-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Lihat Data">
                                             <i class="bi bi-eye"></i>
                                         </a>
                                         <a href="#" class="btn btn-warning btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Ubah Data">

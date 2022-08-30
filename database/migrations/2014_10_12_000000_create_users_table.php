@@ -19,8 +19,10 @@ return new class extends Migration
             $table->string('url')->unique();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('image')->default('default.png');
+            $table->boolean('is_active')->default(TRUE)->comment('1/True = Active, 0/False = Non-Active');
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });
     }
