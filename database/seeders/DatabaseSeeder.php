@@ -48,5 +48,14 @@ class DatabaseSeeder extends Seeder
             'role_id' => 2,
             'password' => Hash::make('password')
         ]);
+
+        User::create([
+            'name' => 'Zaili Fajrizal',
+            'url' => 'zaili-fajrizal',
+            'email' => 'zaili.fajrizal@gmail.com',
+            'role_id' => 2,
+            'is_active' => FALSE,
+            'password' => Hash::make('password')
+        ]);
     }
 }

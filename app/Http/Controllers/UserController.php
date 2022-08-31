@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -38,9 +40,15 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUserRequest $request)
     {
-        //
+        $request['role_id'] = 2;
+        $request['url'] = Str::random(32);
+
+        // Menambah data yang telah tervalidasi ke Database
+        User::create($request->all());
+
+        return redirect('/users')->with('success', 'Data berhasil ditambahkan!');
     }
 
     /**
